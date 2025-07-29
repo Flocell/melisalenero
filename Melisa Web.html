@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melisa Leñero - Transforming Vision into Design Impact</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation - Clean minimal design */
+        header {
+            background: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: #2c3e50;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #6c757d;
+            font-weight: 400;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #2c3e50;
+        }
+
+        /* Hero Section - Invoice-inspired layout */
+        .hero {
+            margin-top: 100px;
+            padding: 80px 0;
+            background: white;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        .hero-content .tagline {
+            font-size: 1.1rem;
+            color: #6c757d;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-content .description {
+            font-size: 1.2rem;
+            color: #495057;
+            margin-bottom: 3rem;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 280px;
+            height: 280px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            border: 1px solid #2c3e50;
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+
+        .cta-button:hover {
+            background: #2c3e50;
+            color: white;
+        }
+
+        .cta-primary {
+            background: #2c3e50;
+            color: white;
+        }
+
+        .cta-primary:hover {
+            background: #495057;
+        }
+
+        /* Sections - Clean spacing */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-white {
+            background: white;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .section-gray {
+            background: #f8f9fa;
+        }
+
+        .section-header {
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: #6c757d;
+            max-width: 600px;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        /* About Section - Two column layout */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+        }
+
+        .about-text h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: #495057;
+            font-size: 1rem;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .highlight {
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        /* Services Section - Clean grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            margin-top: 40px;
+        }
+
+        .service-item {
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .service-item h3 {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .service-item p {
+            color: #6c757d;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* Portfolio Section - Minimal cards */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: white;
+            border: 1px solid #e9ecef;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        .project-content {
+            padding: 40px;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-location {
+            color: #6c757d;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+
+        .project-description {
+            color: #495057;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .project-tag {
+            padding: 4px 12px;
+            border: 1px solid #e9ecef;
+            font-size: 0.8rem;
+            color: #6c757d;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .project-button {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid #2c3e50;
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-button:hover {
+            background: #2c3e50;
+            color: white;
+        }
+
+        /* Experience Section - Table-like layout */
+        .experience-list {
+            margin-top: 40px;
+        }
+
+        .experience-item {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            padding: 30px 0;
+            border-bottom: 1px solid #e9ecef;
+            align-items: start;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        .experience-details h3 {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+
+        .experience-details .company {
+            color: #6c757d;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .experience-details p {
+            color: #495057;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .experience-period {
+            color: #6c757d;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .experience-type {
+            color: #2c3e50;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+
+        /* Contact Section - Invoice-inspired layout */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            margin-top: 40px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-label {
+            color: #6c757d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .contact-value {
+            color: #2c3e50;
+            font-weight: 400;
+        }
+
+        .contact-value a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        .contact-value a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer - Minimal */
+        footer {
+            background: white;
+            border-top: 1px solid #e9ecef;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer p {
+            color: #6c757d;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Modal - Clean design */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(44,62,80,0.9);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 60px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .modal-content h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .modal-content h3 {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin: 2rem 0 1rem 0;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .modal-content p, .modal-content li {
+            color: #495057;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .modal-content ul {
+            margin-left: 20px;
+            margin-bottom: 2rem;
+        }
+
+        .modal-content ol {
+            margin-left: 20px;
+            margin-bottom: 2rem;
+        }
+
+        .close {
+            color: #6c757d;
+            float: right;
+            font-size: 24px;
+            font-weight: normal;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .close:hover {
+            color: #2c3e50;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .experience-item {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .profile-image {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animation for elements in view */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Melisa Leñero</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid fade-in">
+                <div class="hero-content">
+                    <h1>Transforming Vision into Design Impact</h1>
+                    <p class="tagline">Paul Polak Innovation Fund Director | Global Design Consultant</p>
+                    <p class="description">A decade of expertise in systems thinking, transformative methodologies, and sustainable innovation across global markets. I help organisations create meaningful change through human-centred design, working across global development, social innovation, and market systems transformation.</p>
+                    <div class="cta-group">
+                        <a href="#portfolio" class="cta-button cta-primary">View My Work</a>
+                        <a href="#contact" class="cta-button">Let's Collaborate</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCACAAIADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD36iiikAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigApKWigBKSlpKAFpKWkpAWkpaSkAKWkpaACiiigAooooIKKKKACiiigAooooAKKKKACiiigApKWkpACiiigBaKKWgBKSlpKAFpKWkpAClpKWkAKWkpaQFpKWkpATvJRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRS0lAC0lLSUgLSUtFJAWkpaKSAUUUUAFFFFABRRS0AJRRS0AJSUtJSAUUUUAFFFFABRRS0AJRRS0AJS0lFIBaKKKACiiigAooooAKKKKACilooAlKWikpALS0lLSACslpFFFMBaSlpKQCmlpKKAClpKKQFpKKWgBKWkpaQCmlpKKBi0tJRQAlFLRQAlLRRSAWlpKKBiMWjvSUUALRRRQAUUUUAf/Z" alt="Melisa Leñero" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-white">
+        <div class="container fade-in">
+            <div class="section-header">
+                <h2>About</h2>
+                <p>Results-driven consultant specialising in transformative impact through human-centred methodologies.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Reshaping innovation processes through <span class="highlight">strategic design thinking</span> and systematic approaches.</h3>
+                    <p>I collaborate with organisations worldwide to create transformative impact through human-centred design. With over a decade of expertise in systems thinking and innovative methodologies, I guide teams through complex innovation challenges across global development, social innovation, and market systems transformation.</p>
+                    <p>My approach combines rigorous ethnographic research, participatory design, and strategic thinking to develop solutions that deeply resonate with end-users whilst addressing systemic challenges at scale.</p>
+                </div>
+                <div class="about-text">
+                    <p>Currently consulting as <strong>Paul Polak Innovation Fund Director</strong> at iDE, I bring proven expertise in:</p>
+                    <p>• Remote collaboration and cross-cultural design facilitation<br>
+                    • Product development from concept through real-world testing<br>
+                    • Market systems analysis and innovation strategy development<br>
+                    • Capacity building for global development teams</p>
+                    <p>Whether supporting strategic visioning, research design, or product development, I help organisations create solutions that drive meaningful, sustainable change through purposeful connection, efficient collaboration, and effective stakeholder engagement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section-gray">
+        <div class="container fade-in">
+            <div class="section-header">
+                <h2>Consultancy Services</h2>
+                <p>Comprehensive design consulting for organisations creating transformative impact.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Design Strategy & Research</h3>
+                    <p>Strategic design thinking, ethnographic research, user journey mapping, and market systems analysis to uncover insights that drive innovation and create lasting impact across complex organisational dynamics.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Product Development & Testing</h3>
+                    <p>From concept to prototype, guiding teams through iterative design processes, user testing methodologies, and pilot programmes to validate solutions in real-world contexts with measurable outcomes.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Global Team Facilitation</h3>
+                    <p>Remote collaboration expertise, cross-cultural design workshops, stakeholder alignment, and capacity building for distributed teams working on complex global challenges across multiple time zones.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Innovation Process Design</h3>
+                    <p>Custom innovation frameworks, design thinking training programmes, and organisational change strategies to embed human-centred approaches throughout your work and build sustainable innovation capability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section-white">
+        <div class="container fade-in">
+            <div class="section-header">
+                <h2>Portfolio</h2>
+                <p>Selected projects demonstrating design-driven solutions for complex global challenges.</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">Remote Toilet Design & Testing</h3>
+                                <div class="project-location">Madagascar</div>
+                            </div>
+                        </div>
+                        <p class="project-description">Led multicultural team across four countries to design and test aspirational sanitation products during COVID-19, establishing pioneering remote co-design methodologies that prioritise local leadership and authentic community participation.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Remote Co-Design</span>
+                            <span class="project-tag">Product Testing</span>
+                            <span class="project-tag">Cross-Cultural Research</span>
+                            <span class="project-tag">WASH Innovation</span>
+                        </div>
+                        <a href="javascript:void(0)" class="project-button" onclick="openModal('madagascar-modal')">View Case Study</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">HCD for WASH Digital Platform</h3>
+                                <div class="project-location">Global</div>
+                            </div>
+                        </div>
+                        <p class="project-description">Co-designed comprehensive digital resource platform for WASH practitioners worldwide, translating complex design methodologies into accessible, bilingual tools that democratise human-centred design approaches.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Digital UX Design</span>
+                            <span class="project-tag">Co-Creation</span>
+                            <span class="project-tag">Capacity Building</span>
+                            <span class="project-tag">Bilingual Platform</span>
+                        </div>
+                        <a href="javascript:void(0)" class="project-button" onclick="openModal('wash-modal')">View Case Study</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">MAKE Mental Health Innovation</h3>
+                                <div class="project-location">London, UK</div>
+                            </div>
+                        </div>
+                        <p class="project-description">Founded startup focused on teenage mental health innovation, achieving 60% improvement in student wellness through evidence-based art therapy solutions and strategic partnership with London School of Economics.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Startup Leadership</span>
+                            <span class="project-tag">Mental Health Innovation</span>
+                            <span class="project-tag">Evidence-Based Design</span>
+                            <span class="project-tag">Impact Measurement</span>
+                        </div>
+                        <a href="#contact" class="project-button">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">CreativoTres Design Studio</h3>
+                                <div class="project-location">Mexico City</div>
+                            </div>
+                        </div>
+                        <p class="project-description">Co-founded and scaled service design studio to $400K USD turnover with 50% growth, leading international market development and securing $1M in strategic partnerships across Latin America.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Service Design</span>
+                            <span class="project-tag">Business Development</span>
+                            <span class="project-tag">International Markets</span>
+                            <span class="project-tag">Strategic Partnerships</span>
+                        </div>
+                        <a href="#contact" class="project-button">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section-gray">
+        <div class="container fade-in">
+            <div class="section-header">
+                <h2>Professional Experience</h2>
+                <p>Leadership roles in global innovation, design, and strategic development.</p>
+            </div>
+            <div class="experience-list">
+                <div class="experience-item">
+                    <div class="experience-details">
+                        <h3>Paul Polak Innovation Fund Director</h3>
+                        <div class="company">iDE</div>
+                        <p>Leading innovation fund management as independent consultant, overseeing Global Vision pilot work bringing affordable prescription glasses to last-mile customers, and supporting innovators in developing scalable solutions for poverty alleviation.</p>
+                    </div>
+                    <div class="experience-period">Current</div>
+                    <div class="experience-type">Consultancy</div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-details">
+                        <h3>Global Programmes Director</h3>
+                        <div class="company">iDE</div>
+                        <p>Designed 10-year strategic initiatives aligned with global development goals, fostering collaboration across multiple countries and developing innovative solutions for resilient market ecosystems to end poverty sustainably.</p>
+                    </div>
+                    <div class="experience-period">Aug 2024 – Present</div>
+                    <div class="experience-type">Full-time</div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-details">
+                        <h3>Senior Design Manager & Strategist</h3>
+                        <div class="company">iDE Innovation Lab</div>
+                        <p>Led transformative client relationships and large-scale projects using user-centric methodologies aligned with UN SDGs. Supervised global innovation initiatives and established remote collaboration frameworks for cross-cultural design work.</p>
+                    </div>
+                    <div class="experience-period">Aug 2021 – Aug 2024</div>
+                    <div class="experience-type">Full-time</div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-details">
+                        <h3>UN Women Delegate</h3>
+                        <div class="company">68th Commission of the Status of Women</div>
+                        <p>Organising strategic initiatives on gender equality themes including childcare policies, mentorship programmes, and trade procurement at the global policy level, focusing on systemic change for women's empowerment.</p>
+                    </div>
+                    <div class="experience-period">Sep 2023 – Present</div>
+                    <div class="experience-type">Volunteer</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-white">
+        <div class="container fade-in">
+            <div class="section-header">
+                <h2>Let's Collaborate</h2>
+                <p>Available for consulting projects worldwide. Ready to create transformative impact together.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value"><a href="mailto:melisalenero@gmail.com">melisalenero@gmail.com</a></span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Phone</span>
+                        <span class="contact-value"><a href="tel:+447927886143">+44 (0) 7927 886 143</a></span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Location</span>
+                        <span class="contact-value">London, United Kingdom</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value"><a href="#" target="_blank">Connect with me</a></span>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <h3>Consultancy Focus</h3>
+                    <div class="contact-item">
+                        <span class="contact-label">Specialisation</span>
+                        <span class="contact-value">Human-Centred Design</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Sectors</span>
+                        <span class="contact-value">Global Development, Social Innovation</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Approach</span>
+                        <span class="contact-value">Systems Thinking, Co-Design</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Availability</span>
+                        <span class="contact-value">Accepting New Projects</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Melisa Leñero • Design Impact Consultant</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Madagascar Project -->
+    <div id="madagascar-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('madagascar-modal')">&times;</span>
+            <h2>Remote Toilet Design & Testing - Madagascar</h2>
+            <p><strong>Challenge:</strong> Design aspirational sanitation products for rural Madagascar during COVID-19 restrictions, requiring innovative remote collaboration methods whilst ensuring authentic local participation and cultural sensitivity.</p>
+            
+            <h3>My Role</h3>
+            <p>As Senior Design Manager, I supervised and designed this groundbreaking project, leading a multicultural team spanning four countries. I developed comprehensive research strategy, supervised ethnographic studies, conducted user testing methodologies, and established pioneering remote co-design frameworks.</p>
+            
+            <h3>Key Achievements</h3>
+            <ul>
+                <li>Developed innovative remote Human-Centred Design coaching framework for global teams</li>
+                <li>Led comprehensive ethnographic research uncovering critical cultural insights and taboos</li>
+                <li>Supervised prototype development and real-world testing in challenging field conditions</li>
+                <li>Created sustainable methodology for equitable cross-cultural design collaboration</li>
+                <li>Achieved successful product validation through comprehensive sales pilots and user feedback</li>
+                <li>Established cyclone-resilience testing through advanced structural modelling and analysis</li>
+            </ul>
+
+            <h3>Innovative Methodology</h3>
+            <p>Established comprehensive remote collaboration framework including agile team management across multiple time zones, multilingual communication strategies (English, French, Malagasy), real-time data collection using ONA platform, and extensive capacity building programme positioning local team members as design leaders rather than implementers.</p>
+
+            <h3>Transformative Impact</h3>
+            <p>This project pioneered a new approach to remote co-design that enables more equitable participation of local voices in global development projects whilst significantly reducing carbon footprint. The methodology has been adopted as standard practice for future iDE projects worldwide, demonstrating sustainable innovation in design practice and cross-cultural collaboration.</p>
+        </div>
+    </div>
+
+    <!-- Modal for WASH Project -->
+    <div id="wash-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('wash-modal')">&times;</span>
+            <h2>HCD for WASH Digital Platform - Global</h2>
+            <p><strong>Challenge:</strong> Create an accessible digital resource to help WASH practitioners worldwide integrate Human-Centred Design into their projects, overcoming perceptions that HCD methodologies are too complex and time-consuming for field implementation with limited resources.</p>
+            
+            <h3>My Role</h3>
+            <p>As Senior Design Manager, I led the comprehensive co-design process with WASH practitioners globally, supervised extensive user research across multiple countries, and guided development of both content strategy and user experience design for the HCDforWASH.org platform.</p>
+            
+            <h3>Key Achievements</h3>
+            <ul>
+                <li>Co-designed comprehensive digital platform with global WASH practitioner community</li>
+                <li>Developed five core design principles for accessible design education delivery</li>
+                <li>Created bilingual resource platform (English/French) with 50+ tools and templates</li>
+                <li>Established sustainable framework for ongoing design capacity building programmes</li>
+                <li>Successfully launched platform serving practitioners across 40+ countries</li>
+                <li>Achieved measurable improvement in HCD adoption rates among target user groups</li>
+            </ul>
+
+            <h3>Design Principles Established</h3>
+            <ol>
+                <li><strong>Accessible & Encouraging:</strong> Used familiar WASH sector language to make HCD approachable for practitioners</li>
+                <li><strong>Incremental Progress:</strong> Showcased achievable wins throughout project cycles rather than overwhelming users</li>
+                <li><strong>Problem-Solving Focus:</strong> Prioritised addressing real field challenges over purely methodology teaching</li>
+                <li><strong>Shareable Resources:</strong> Emphasised toolkit shareability over purely aesthetic design considerations</li>
+                <li><strong>Seamless Navigation:</strong> Broke down complex concepts into actionable, sequential steps for implementation</li>
+            </ol>
+
+            <h3>Comprehensive Research & Co-Design Process</h3>
+            <p>Led extensive discovery research with WASH practitioners, project managers, and donor representatives across multiple regions to understand systemic barriers to HCD adoption. Facilitated multiple co-creation sessions and iterative usability testing rounds to ensure the platform addressed genuine user needs and organisational constraints rather than theoretical ideals.</p>
+
+            <h3>Lasting Impact</h3>
+            <p>The platform successfully democratised access to design thinking methodologies for the global WASH community, making complex approaches accessible to practitioners with limited time and resources. It continues to serve as a primary resource for USAID-funded programming worldwide, demonstrating scalable impact in design education and capacity building across the development sector.</p>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header background change on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.15)';
+            } else {
+                header.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Modal functionality
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const modals = document.querySelectorAll('.modal');
+                modals.forEach(modal => {
+                    if (modal.style.display === 'block') {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
